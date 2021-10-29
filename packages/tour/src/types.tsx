@@ -183,6 +183,11 @@ export type ProviderProps = SharedProps & {
    * Set the initial Step number when the tour starts
    */
   startAt?: number
+
+  /**
+   * Called when the Tour is closed
+   */
+  onClose?: (props: Object) => void | null
 }
 
 export type ContentProps = {

@@ -1,7 +1,8 @@
-import React, { useContext } from 'react'
+import React, { useEffect, useContext } from 'react'
 import { useState } from 'react'
 import Tour from './Tour'
 import { ProviderProps, TourProps } from './types'
+import usePrevious from './usePrevious'
 
 const defaultState = {
   isOpen: false,
@@ -21,6 +22,7 @@ const TourProvider: React.FC<ProviderProps> = ({
   defaultOpen = false,
   startAt = 0,
   steps: defaultSteps,
+  onClose,
   ...props
 }) => {
   const [isOpen, setIsOpen] = useState(defaultOpen)
@@ -39,6 +41,16 @@ const TourProvider: React.FC<ProviderProps> = ({
     setDisabledActions,
     ...props,
   }
+
+  const previousIsOpen = usePrevious(isOpen)
+
+  useEffect(() => {
+    const hasClosedTour = previousIsOpen === true && isOpen === false
+
+    if (hasClosedTour && onClickMask && typeof onClickMask === 'function') {
+      onClose({ currentStep, steps })
+    }
+  }, [isOpen, previousIsOpen])
 
   return (
     <TourContext.Provider value={value}>
