@@ -225,7 +225,7 @@ Useful solution to use when blink dots needed in certain Elements of the viewpor
 ```jsx
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { getRect } from '@reactour/utils'
-import { keyframes } from '@emotion/core'
+import { keyframes } from '@emotion/react'
 import { useIntersectionObserver } from '../hooks'
 
 const AppDemo = () => {
