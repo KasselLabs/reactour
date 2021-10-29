@@ -47,7 +47,7 @@ const TourProvider: React.FC<ProviderProps> = ({
   useEffect(() => {
     const hasClosedTour = previousIsOpen === true && isOpen === false
 
-    if (hasClosedTour && onClickMask && typeof onClickMask === 'function') {
+    if (hasClosedTour && onClose && typeof onClose === 'function') {
       onClose({ currentStep, steps })
     }
   }, [isOpen, previousIsOpen])
