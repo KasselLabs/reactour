@@ -156,6 +156,7 @@ type ClickProps = {
   setIsOpen: Dispatch<React.SetStateAction<Boolean>>
   setCurrentStep: Dispatch<React.SetStateAction<number>>
   currentStep: number
+  steps: StepType[]
 }
 
 export type TourProps = SharedProps &
