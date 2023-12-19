@@ -9,7 +9,7 @@
     "@reactour/popover": "*",
     "@reactour/tour": "*",
     "@reactour/utils": "*",
-    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "body-scroll-lock": "4.0.0-beta.0",
@@ -20,8 +20,8 @@
     "react-dom": "^17.0.2",
     "react-modal": "3.14.3",
     "react-router-dom": "5.3.0",
-    "react-scripts": "4.0.3",
-    "react-styleguidist": "11.1.7",
+    "react-scripts": "5.0.0",
+    "react-styleguidist": "11.2.0",
     "web-vitals": "^2.1.2"
   },
   "scripts": {
